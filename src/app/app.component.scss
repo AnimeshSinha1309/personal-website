@@ -3,9 +3,13 @@
 nav.navbar {
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
-    .navbar-brand {
+    a.navbar-brand {
         font-weight: bold;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    li.nav-item {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

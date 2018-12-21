@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { StuffComponent } from './stuff/stuff.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule, MatButtonModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { StuffComponent } from './stuff/stuff.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

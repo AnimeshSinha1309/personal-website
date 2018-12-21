@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import "~node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
     margin: 0;
+}
+.page-heading {
+    padding: 30px;
 }
