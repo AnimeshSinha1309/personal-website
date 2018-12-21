@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+nav.navbar {
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    .navbar-brand {
+        font-weight: bold;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
