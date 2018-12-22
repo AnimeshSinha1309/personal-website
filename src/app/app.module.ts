@@ -11,6 +11,7 @@ import { StuffComponent } from './stuff/stuff.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatButtonModule } from '@angular/material';
+import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,15 @@ import { MatCardModule, MatButtonModule } from '@angular/material';
     FriendsComponent,
     HomeComponent,
     ProjectsComponent,
-    StuffComponent
+    StuffComponent,
+    LogicalagentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
