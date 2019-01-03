@@ -1,6 +1,31 @@
-<h1 class="display-1 text-center page-heading">
-  Just one illustration now - AI
-</h1>
+<div class="container" id="illustrations-topic">
+  <h1 class="display-2 page-heading">
+    Illustrative Examples
+  </h1>
+  <h3 class="display-5">
+    Choose your topic here:
+  </h3>
+
+  <mat-toolbar color="secondary">
+    <mat-toolbar-row>
+      <button mat-button [matMenuTriggerFor]="menuSubject">Computer Science</button>
+      <mat-menu #menuSubject="matMenu">
+        <button mat-menu-item>Computer Science</button>
+      </mat-menu>
+      <span style="padding-bottom: 5px">&#187;</span>
+      <button mat-button [matMenuTriggerFor]="menuChapter">Artificial Intelligence</button>
+      <mat-menu #menuChapter="matMenu">
+        <button mat-menu-item>Artificial Intelligence</button>
+      </mat-menu>
+      <span style="padding-bottom: 5px">&#187;</span>
+      <button mat-button [matMenuTriggerFor]="menuTopic">Logical Agents</button>
+      <mat-menu #menuTopic="matMenu">
+        <button mat-menu-item>Logical Agents</button>
+      </mat-menu>
+      <span>&#10003;</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
 
 <app-illustrations-artificialintelligence-logicalagent>
 </app-illustrations-artificialintelligence-logicalagent>

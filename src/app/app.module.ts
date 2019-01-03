@@ -10,7 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { StuffComponent } from './stuff/stuff.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatButtonModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule } from '@angular/material';
 import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
 
 @NgModule({
@@ -29,6 +29,9 @@ import { LogicalagentComponent } from './illustrations/artificialintelligence/lo
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

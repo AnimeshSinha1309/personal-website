@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/~animesh.sinha/",
+            "outputPath": "dist/",
             "baseHref": "/~animesh.sinha/",
             "index": "src/index.html",
             "main": "src/main.ts",

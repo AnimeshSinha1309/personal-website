@@ -45,7 +45,7 @@ export class ModelFiltering {
       // Generate the Banner for Wumpus
       this.canvasParent.rect(this.UX_SIZE, this.UX_SIZE * 0.25)
         .center((i * 1.01 + 0.5) * this.UX_SIZE, 0.125 * this.UX_SIZE)
-        .fill({ color: "#000000" });
+        .fill({ color: "#0a0a0a" });
       this.canvasParent.text("Move " + moveTexts[i] + ", Check Wumpus")
         .center((i * 1.01 + 0.5) * this.UX_SIZE, 0.125 * this.UX_SIZE)
         .font({ fill: "#ffffff" });
@@ -55,7 +55,7 @@ export class ModelFiltering {
       // Generate the Banner for Pits
       this.canvasParent.rect(this.UX_SIZE, this.UX_SIZE * 0.25)
         .center((i * 1.01 + 0.5) * this.UX_SIZE, 1.385 * this.UX_SIZE)
-        .fill({ color: "#000000" });
+        .fill({ color: "#0a0a0a" });
       this.canvasParent.text("Move " + moveTexts[i] + ", Check Pit")
         .center((i * 1.01 + 0.5) * this.UX_SIZE, 1.385 * this.UX_SIZE)
         .font({ fill: "#ffffff" });

@@ -4,7 +4,7 @@
         "website": "#",
         "username": "sakshi",
         "school": "Allen, Kota",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/sakshisindhuja.jpeg"
     },
     {
@@ -12,7 +12,7 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "bhuvanesh",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/bhuvaneshsridharan.jpeg"
     },
     {
@@ -20,7 +20,7 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "mukund",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/mukundchoudhary.jpeg"
     },
     {
@@ -28,7 +28,7 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "shreeya",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/shreeyapahune.jpeg"
     },
     {
@@ -36,7 +36,7 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "shubhangi",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/shubhangidutta.jpeg"
     },
     {
@@ -44,15 +44,15 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "kavya",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/kavyakolly.jpeg"
     },
     {
         "name": "Ankit Kumar",
         "website": "#",
-        "school": "IIIT Kharagpur",
+        "school": "IIT Kharagpur",
         "username": "ankit",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/ankitkumar.jpeg"
     },
     {
@@ -60,7 +60,7 @@
         "website": "#",
         "school": "IIT Bombay",
         "username": "abhinav",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/abhinavapurva.jpeg"
     },
     {
@@ -68,7 +68,7 @@
         "website": "#",
         "school": "IIIT Hyderabad",
         "username": "tanvi",
-        "text": "I am a playful human, come visit my page and talk to me!",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
         "image": "assets/friends/tanvikarandikar.jpeg"
     }
 ]
