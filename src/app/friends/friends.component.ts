@@ -1,4 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import { Friend } from './friend.model'
+import { FriendService } from './friend.service'
 
 @Component({
   selector: 'app-friends',
@@ -7,20 +9,18 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class FriendsComponent implements OnInit {
 
-  friends: Friend[] = require('./friends.json');
+  friends: Friend[];
 
-  constructor() { }
+  constructor(private friendService: FriendService) { }
 
   ngOnInit() {
+    this.friendService.getFriends().subscribe(data => {
+      this.friends = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Friend;
+      }).sort((a: Friend, b: Friend) => (b.degval - a.degval))
+    });
   }
-
-}
-
-class Friend {
-  name: string;
-  website: string;
-  username: string;
-  text: string;
-  image: string;
-  school: string;
 }

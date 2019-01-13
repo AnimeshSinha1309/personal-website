@@ -13,6 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule } from '@angular/material';
 import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +37,10 @@ import { LogicalagentComponent } from './illustrations/artificialintelligence/lo
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
+    AngularFireModule.initializeApp(environment.firebase),
+   	AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

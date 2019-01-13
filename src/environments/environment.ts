@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "AIzaSyBEqX5EXqhTsEDf5ujduEhushEXxVDQoZc",
+    authDomain: "animesh-researchwebwebsite.firebaseapp.com",
+    databaseURL: "https://animesh-researchwebwebsite.firebaseio.com",
+    projectId: "animesh-researchwebwebsite",
+    storageBucket: "animesh-researchwebwebsite.appspot.com",
+    messagingSenderId: "413085083843"
+  }
 };
 
 /*
