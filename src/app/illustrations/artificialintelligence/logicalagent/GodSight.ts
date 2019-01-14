@@ -34,6 +34,48 @@ export class GodSight {
     }
     for (let i = 0; i < this.GRID_SIZE; i++) {
       for (let j = 0; j < this.GRID_SIZE; j++) {
+        if (this.tiles[i][j].hasWumpus) {
+          this.canvas.image('assets/illustrations/logicalagents/wumpus.png',
+            this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.6)
+            .center(this.CENTERS[i], this.CENTERS[j]);
+        }
+        else if (this.tiles[i][j].hasPit) {
+          this.canvas.image('assets/illustrations/logicalagents/pit.png',
+            this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.6)
+            .center(this.CENTERS[i], this.CENTERS[j]);
+        }
+        else {
+          if (this.tiles[i][j].hasGold) {
+            this.canvas.image('assets/illustrations/logicalagents/gold.png',
+              this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.2)
+              .center(this.CENTERS[i], this.CENTERS[j]);
+          }
+          if (this.tiles[i][j].hasBreeze) {
+            this.canvas.image('assets/illustrations/logicalagents/breeze.png',
+              this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.2)
+              .center(this.CENTERS[i], this.CENTERS[j] + this.BLOCK_SIZE * 0.25);
+          }
+          if (this.tiles[i][j].hasStench) {
+            this.canvas.image('assets/illustrations/logicalagents/stench.png',
+              this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.2)
+              .center(this.CENTERS[i], this.CENTERS[j] - this.BLOCK_SIZE * 0.25);
+          }
+        }
+      }
+    }
+    this.displayed = true;
+  }
+
+  /**
+   * @deprecated
+   * Renders all the labels for Gold, Pit, Wumpus, Breeze and Stench as text.
+   */
+  public renderText(): void {
+    if (this.displayed) {
+      return;
+    }
+    for (let i = 0; i < this.GRID_SIZE; i++) {
+      for (let j = 0; j < this.GRID_SIZE; j++) {
         if (this.tiles[i][j].hasStench) {
           const s1 = this.canvas.rect(this.BLOCK_SIZE * 0.6, this.BLOCK_SIZE * 0.15);
           s1.center(this.CENTERS[i], this.CENTERS[j] - this.BLOCK_SIZE * 0.25);
