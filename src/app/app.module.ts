@@ -18,6 +18,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
 
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './users/login/login.component';
+import { ProfileComponent } from './users/profile/profile.component';
+import { RegisterComponent } from './users/register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +33,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
     ProjectsComponent,
     StuffComponent,
     LogicalagentComponent,
+    LoginComponent,
+    ProfileComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
     MatMenuModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
-   	AngularFireDatabaseModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

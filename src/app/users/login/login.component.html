@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="display-2">Log in</h1>
+  <div *ngIf="!auth.currentUser; else alreadyLoggedIn">
+    <button (click)="signInWithGoogle()" class="btn" id="google-signin">
+      <span class="icon"></span>
+      <span class="label">Login with Google</span>
+    </button>
+  </div>
+  <ng-template #alreadyLoggedIn>
+      Already logged in!
+  </ng-template>
+</div>

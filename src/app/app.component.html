@@ -18,14 +18,18 @@
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" routerLink="/projects">Projects</a>
       </li>
-      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" routerLink="/stuff">Stuff</a>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="!auth.currentUser" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!auth.currentUser" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li *ngIf="auth.currentUser" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/profile">My Profile</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Does not Work." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Google</button>
-    </form>
   </div>
 </nav>
 
