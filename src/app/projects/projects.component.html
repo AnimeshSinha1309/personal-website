@@ -1,3 +1,44 @@
-<h1 class="display-1 text-center page-heading">
-  Projects works!
-</h1>
+<div class="container">
+<form #newCommentForm="ngForm" (ngSubmit)="onSubmit(newCommentForm)">
+  <h3 class="display-5">Talk to me!</h3>
+  <div class="form-group">
+    <label for="formName">Your Name</label>
+    <input type="text" class="form-control" placeholder="John Doe" id="formEmail" [(ngModel)]="formName" name="formName">
+  </div>
+  <div class="form-group">
+    <label for="formEmail">Email address</label>
+    <input type="email" class="form-control" placeholder="name@example.com" id="formEmail" [(ngModel)]="formEmail" name="formEmail">
+  </div>
+  <div class="form-group">
+    <label for="formWhere">Where do you know me from?</label>
+    <select class="form-control" id="formWhere" [(ngModel)]="formWhere" name="formWhere">
+      <option>International Institute of Information Technology, Hyderabad</option>
+      <option>St. Thomas School</option>
+      <option>Delhi Public School</option>
+      <option>FIITJEE Ranchi</option>
+      <option>Any Other Place :D</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="formMessage">Message you wanna Post</label>
+    <textarea class="form-control" id="formMessage" rows="3" [(ngModel)]="formMessage" name="formMessage"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Post Message</button>
+</form>
+
+<div class="row">
+  <div *ngFor="let comment of comments" class="col-lg-4 card-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ comment.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{ comment.message }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+</div>

@@ -7,8 +7,6 @@ import { IllustrationsComponent } from './illustrations/illustrations.component'
 import { ProjectsComponent } from './projects/projects.component'
 import { StuffComponent } from './stuff/stuff.component'
 import { LoginComponent } from './users/login/login.component';
-import { RegisterComponent } from './users/register/register.component';
-import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileComponent } from './users/profile/profile.component';
 
 const routes: Routes = [
@@ -19,8 +17,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'stuff', component: StuffComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'register', component: RegisterComponent }  
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({

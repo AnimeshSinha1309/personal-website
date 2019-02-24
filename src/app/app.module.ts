@@ -22,7 +22,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './users/login/login.component';
 import { ProfileComponent } from './users/profile/profile.component';
-import { RegisterComponent } from './users/register/register.component';
+
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -34,8 +35,7 @@ import { RegisterComponent } from './users/register/register.component';
     StuffComponent,
     LogicalagentComponent,
     LoginComponent,
-    ProfileComponent,
-    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,8 @@ import { RegisterComponent } from './users/register/register.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
