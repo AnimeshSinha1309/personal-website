@@ -17,6 +17,7 @@ export class ProjectsComponent implements OnInit {
   formMessage: string;
   formName: string;
   favoriteColorControl = new FormControl('');
+  clickCount: number;
   comments: any;
 
   constructor(public commentsService: CommentsService) { }
@@ -30,6 +31,7 @@ export class ProjectsComponent implements OnInit {
         } as Comment;
       })
     });
+    this.clickCount = Number(window.localStorage.getItem('clickCount'));
   }
 
   onSubmit(form: NgForm) {
@@ -41,6 +43,11 @@ export class ProjectsComponent implements OnInit {
       "message": this.formMessage
     });
     console.log(comment);
+  }
+
+  clickCounter() {
+    this.clickCount += 1;
+    window.localStorage.setItem('clickCount', this.clickCount.toString());
   }
 
 }
