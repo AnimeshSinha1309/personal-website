@@ -25,25 +25,11 @@ class _AppDrawerState extends State<AppDrawer> {
                 Navigator.pushReplacementNamed(context, '/home');
               }),
           new ListTile(
-              leading: Icon(Icons.search),
-              title: new Text('Search'),
+              leading: Icon(Icons.laptop_chromebook),
+              title: new Text('Resume'),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/search');
-              }),
-          new ListTile(
-              leading: Icon(Icons.location_on),
-              title: new Text('Guide'),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/guide');
-              }),
-          new ListTile(
-              leading: Icon(Icons.file_upload),
-              title: new Text('Contribute Info'),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/contribute');
+                Navigator.pushReplacementNamed(context, '/resume');
               }),
           new ListTile(
               leading: Icon(Icons.people),
@@ -53,26 +39,32 @@ class _AppDrawerState extends State<AppDrawer> {
                 Navigator.pushReplacementNamed(context, '/friends');
               }),
           new ListTile(
-              leading: Icon(Icons.library_books),
-              title: new Text('Reading Goals'),
-              trailing: Chip(label: Text('13')),
+              leading: Icon(Icons.all_inclusive),
+              title: new Text('Teams'),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/goals');
+                Navigator.pushReplacementNamed(context, '/teams');
               }),
           new ListTile(
-              leading: Icon(Icons.card_membership),
-              title: new Text('Library Card'),
+              leading: Icon(Icons.book),
+              title: new Text('Research'),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/libcard');
+                Navigator.pushReplacementNamed(context, '/research');
               }),
           new ListTile(
-              leading: Icon(Icons.library_add),
-              title: new Text('Request Book'),
+              leading: Icon(Icons.android),
+              title: new Text('Projects'),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/request');
+                Navigator.pushReplacementNamed(context, '/projects');
+              }),
+          new ListTile(
+              leading: Icon(Icons.code),
+              title: new Text('Programming'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushReplacementNamed(context, '/programming');
               }),
           new Divider(
             color: Colors.grey,
@@ -87,10 +79,10 @@ class _AppDrawerState extends State<AppDrawer> {
               }),
           new ListTile(
               leading: Icon(Icons.info),
-              title: new Text('About'),
+              title: new Text('App Info'),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacementNamed(context, '/about');
+                Navigator.pushReplacementNamed(context, '/info');
               }),
         ]));
   }

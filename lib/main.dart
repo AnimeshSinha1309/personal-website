@@ -1,26 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:personalwebsite/friends.dart';
+import 'package:personalwebsite/programming.dart';
+import 'package:personalwebsite/projects.dart';
+import 'package:personalwebsite/research.dart';
+import 'package:personalwebsite/teams.dart';
+
+import './drawer.dart';
+import './resume.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animeshion',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        accentColor: Colors.purpleAccent,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        title: 'LibMate',
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+          accentColor: Colors.purpleAccent,
+        ),
+        home: MyHomePage(),
+        routes: <String, WidgetBuilder>{
+          '/home': (BuildContext context) => new MyHomePage(),
+          '/resume': (BuildContext context) => new ResumePage(),
+          '/projects': (BuildContext context) => new ProjectsPage(),
+          '/friends': (BuildContext context) => new FriendsPage(),
+          '/teams': (BuildContext context) => new TeamsPage(),
+          '/programing': (BuildContext context) => new ProgrammingPage(),
+          '/research': (BuildContext context) => new ResearchPage(),
+        });
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -39,8 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Hi, I am Animesh!'),
       ),
+      drawer: AppDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,18 +62,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Text('You Pressed $_counter Times',
+                style: Theme.of(context).textTheme.headline4),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        child: Icon(Icons.android),
+      ),
     );
   }
 }
