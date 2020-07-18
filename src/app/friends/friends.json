@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Sakshi Sindhuja",
+        "website": "#",
+        "username": "sakshi",
+        "school": "Allen, Kota",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/sakshisindhuja.jpeg"
+    },
+    {
+        "name": "Bhuvanesh Sridharan",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "bhuvanesh",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/bhuvaneshsridharan.jpeg"
+    },
+    {
+        "name": "Mukund Choudhary",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "mukund",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/mukundchoudhary.jpeg"
+    },
+    {
+        "name": "Shreeya Pahune",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "shreeya",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/shreeyapahune.jpeg"
+    },
+    {
+        "name": "Shubhangi Dutta",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "shubhangi",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/shubhangidutta.jpeg"
+    },
+    {
+        "name": "Kavya Kolly",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "kavya",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/kavyakolly.jpeg"
+    },
+    {
+        "name": "Ankit Kumar",
+        "website": "#",
+        "school": "IIT Kharagpur",
+        "username": "ankit",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/ankitkumar.jpeg"
+    },
+    {
+        "name": "Abhinav Apurva",
+        "website": "#",
+        "school": "IIT Bombay",
+        "username": "abhinav",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/abhinavapurva.jpeg"
+    },
+    {
+        "name": "Tanvi Karandikar",
+        "website": "#",
+        "school": "IIIT Hyderabad",
+        "username": "tanvi",
+        "text": "This is the place for sample text. The @angular/fire module will be up to create friend profiles on the database. Please feed the text you feel best describes you when the database is up!",
+        "image": "assets/friends/tanvikarandikar.jpeg"
+    }
+]
