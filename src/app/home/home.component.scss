@@ -1,3 +1,16 @@
 div.container {
     padding: 50px;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+.project-item {
+    div.border-box {
+        border: thick gray solid;
+        padding: 10px;
+    }
+    padding: 10px;
+    font-size: larger;
+}
