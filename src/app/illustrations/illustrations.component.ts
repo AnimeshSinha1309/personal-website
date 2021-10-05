@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-illustrations',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./illustrations.component.scss']
 })
 export class IllustrationsComponent implements OnInit {
+
+  modulesList = {
+    "Artificial Intelligence": ["Logical Agent"],
+    "Molecular Chemistry": ["Molecule Render"],
+  }
+
+  @Input() selectedClass: string = "Select Section";
+  @Input() selectedDemo: string = "Select Demo";
 
   constructor() {}
 

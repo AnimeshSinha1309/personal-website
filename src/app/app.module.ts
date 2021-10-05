@@ -14,7 +14,9 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
+
 import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
+import { MoleculeRenderComponent } from './illustrations/molecularchemistry/moleculerender/moleculerender.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -34,8 +36,10 @@ import { FormsModule } from '@angular/forms'
     FriendsComponent,
     HomeComponent,
     ProjectsComponent,
+    ProfileComponent,
+    // The submodules being rendered
     LogicalagentComponent,
-    ProfileComponent
+    MoleculeRenderComponent,
   ],
   imports: [
     BrowserModule,

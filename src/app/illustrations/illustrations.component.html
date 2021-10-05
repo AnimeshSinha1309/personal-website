@@ -14,20 +14,29 @@
         <button mat-menu-item>Computer Science</button>
       </mat-menu>
       <span style="padding-bottom: 5px">&#187;</span>
-      <button mat-button [matMenuTriggerFor]="menuChapter">Artificial
-        Intelligence</button>
+      <button mat-button [matMenuTriggerFor]="menuChapter">{{selectedClass}}</button>
       <mat-menu #menuChapter="matMenu">
-        <button mat-menu-item>Artificial Intelligence</button>
+        <button mat-menu-item
+                *ngFor="let component of modulesList | keyvalue"
+                (click)="selectedClass = component.key">
+          {{component.key}}
+        </button>
       </mat-menu>
       <span style="padding-bottom: 5px">&#187;</span>
-      <button mat-button [matMenuTriggerFor]="menuTopic">Logical Agents</button>
+      <button mat-button [matMenuTriggerFor]="menuTopic">{{selectedDemo}}</button>
       <mat-menu #menuTopic="matMenu">
-        <button mat-menu-item>Logical Agents</button>
+        <button mat-menu-item
+                *ngFor="let demo of modulesList[selectedClass]"
+                (click)="selectedDemo = demo">
+          {{demo}}
+        </button>
       </mat-menu>
       <span>&#10003;</span>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
 
-<app-illustrations-artificialintelligence-logicalagent>
+<app-illustrations-artificialintelligence-logicalagent *ngIf="selectedDemo == 'Logical Agent'">
 </app-illustrations-artificialintelligence-logicalagent>
+<app-illustrations-molecularchemistry-moleculerender *ngIf="selectedDemo == 'Molecule Render'">
+</app-illustrations-molecularchemistry-moleculerender>
