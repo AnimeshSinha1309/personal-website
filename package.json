@@ -24,14 +24,17 @@
     "@angular/router": "^12.2.8",
     "firebase": "^9.1.1",
     "jquery": "^3.6.0",
-    "svg.js": "^2.7.1"
+    "svg.js": "^2.7.1",
+    "three": "^0.133.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.2.8",
     "@angular/cli": "^12.2.8",
     "@angular/compiler-cli": "^12.2.8",
     "@angular/language-service": "^12.2.8",
+    "@types/jasmine": "^3.9.1",
     "@types/node": "^16.10.2",
-    "bootstrap": "^5.1.2"
+    "bootstrap": "^5.1.2",
+    "karma": "^6.3.4"
   }
 }
