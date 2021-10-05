@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore'
+import { AngularFirestore } from '@angular/fire/compat/firestore'
 import { Friend } from './friend.model'
 
 @Injectable({
@@ -13,4 +13,4 @@ export class FriendService {
     return this.firestore.collection('friends').snapshotChanges();
   }
 }
- 
+

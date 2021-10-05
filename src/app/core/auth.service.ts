@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Router } from "@angular/router";
-import * as firebase from "firebase";
+import * as firebase_auth from "firebase/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -42,12 +42,12 @@ export class AuthService {
   }
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider()
+    const provider = new firebase_auth.GoogleAuthProvider()
     return this.socialSignIn(provider);
   }
 
   private socialSignIn(provider) {
-    return this.afAuth.auth.signInWithPopup(provider)
+    return this.afAuth.signInWithPopup(provider)
       .then((credential) =>  {
           this.authState = credential.user
           this.updateUserData()
@@ -56,7 +56,7 @@ export class AuthService {
   }
 
   signOut(): void {
-    this.afAuth.auth.signOut();
+    this.afAuth.signOut();
     this.router.navigate(['/'])
   }
 

@@ -18,7 +18,7 @@ export class FriendsComponent implements OnInit {
       this.friends = data.map(e => {
         return {
           id: e.payload.doc.id,
-          ...e.payload.doc.data()
+          ...e.payload.doc.data() as {}
         } as Friend;
       }).sort((a: Friend, b: Friend) => (b.degval - a.degval))
     });
