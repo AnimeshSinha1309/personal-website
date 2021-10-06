@@ -13,7 +13,7 @@ export class IllustrationsComponent implements OnInit {
   }
 
   @Input() selectedClass: string = "Select Section";
-  @Input() selectedDemo: string = "Select Demo";
+  @Input() selectedDemo: string = "Molecule Render";
 
   constructor() {}
 
