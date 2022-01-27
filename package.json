@@ -25,7 +25,7 @@
     "firebase": "^9.1.1",
     "jquery": "^3.6.0",
     "svg.js": "^2.7.1",
-    "three": "^0.133.1"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.2.8",
