@@ -6,19 +6,13 @@
     <div *ngFor="let friend of friends" class="col-lg-4 card-container">
       <mat-card>
         <mat-card-header>
-          <img *ngIf="friend.image.length != 0" mat-card-avatar src="{{ friend.image }}" alt="A">
+          <img mat-card-avatar src="assets/friends/{{ friend.id }}.jpeg" alt="A">
           <mat-card-title>{{ friend.name }}</mat-card-title>
-          <mat-card-subtitle>{{ friend.school }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ friend.affiliation }}</mat-card-subtitle>
         </mat-card-header>
-        <img *ngIf="friend.image.length != 0" mat-card-image src="{{ friend.image }}" alt="Friend Avatar">
-        <mat-card-content>
-          <p>
-            {{ friend.text }}
-          </p>
-        </mat-card-content>
+        <img mat-card-image class="friend-image" src="assets/friends/{{ friend.id }}.jpeg" alt="Friend Avatar">
         <mat-card-actions>
-          <a mat-button href="{{ friend.website }}">Website</a>
-          <a mat-button href="{{ friend.website }}">Facebook</a>
+          <a mat-button href="{{ friend.linkedin }}">LinkedIn</a>
         </mat-card-actions>
       </mat-card>
     </div>

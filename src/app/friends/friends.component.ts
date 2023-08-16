@@ -20,7 +20,7 @@ export class FriendsComponent implements OnInit {
           id: e.payload.doc.id,
           ...e.payload.doc.data() as {}
         } as Friend;
-      }).sort((a: Friend, b: Friend) => (b.degval - a.degval))
+      }).sort((a: Friend, b: Friend) => ((b.degval ?? 0) - (a.degval ?? 0)))
     });
   }
 }

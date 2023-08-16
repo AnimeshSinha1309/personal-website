@@ -7,3 +7,9 @@ div {
 a:hover {
    text-decoration: none;
 }
+
+.friend-image {
+   height: 400px;
+   width: 400px;
+   object-fit: cover;
+}

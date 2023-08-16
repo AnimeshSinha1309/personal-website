@@ -1,32 +1,10 @@
-<div class="container" id="illustrations-topic">
-  <h1 class="display-2 page-heading">
-    Illustrative Examples
-  </h1>
-  <h3 class="display-5">
-    Choose your topic here:
-  </h3>
-
+<div id="illustrations-topic">
   <mat-toolbar color="secondary">
     <mat-toolbar-row>
-      <button mat-button [matMenuTriggerFor]="menuSubject">Computer
-        Science</button>
-      <mat-menu #menuSubject="matMenu">
-        <button mat-menu-item>Computer Science</button>
-      </mat-menu>
-      <span style="padding-bottom: 5px">&#187;</span>
-      <button mat-button [matMenuTriggerFor]="menuChapter">{{selectedClass}}</button>
-      <mat-menu #menuChapter="matMenu">
-        <button mat-menu-item
-                *ngFor="let component of modulesList | keyvalue"
-                (click)="selectedClass = component.key">
-          {{component.key}}
-        </button>
-      </mat-menu>
-      <span style="padding-bottom: 5px">&#187;</span>
       <button mat-button [matMenuTriggerFor]="menuTopic">{{selectedDemo}}</button>
       <mat-menu #menuTopic="matMenu">
         <button mat-menu-item
-                *ngFor="let demo of modulesList[selectedClass]"
+                *ngFor="let demo of modulesList"
                 (click)="selectedDemo = demo">
           {{demo}}
         </button>
@@ -36,7 +14,9 @@
   </mat-toolbar>
 </div>
 
-<app-illustrations-artificialintelligence-logicalagent *ngIf="selectedDemo == 'Logical Agent'">
+<app-illustrations-artificialintelligence-logicalagent
+  *ngIf="selectedDemo == 'Artificial Intelligence / Model Filtering'">
 </app-illustrations-artificialintelligence-logicalagent>
-<app-illustrations-molecularchemistry-moleculerender *ngIf="selectedDemo == 'Molecule Render'">
+<app-illustrations-molecularchemistry-moleculerender
+  *ngIf="selectedDemo == 'Molecular Chemistry / Molecule Render'">
 </app-illustrations-molecularchemistry-moleculerender>

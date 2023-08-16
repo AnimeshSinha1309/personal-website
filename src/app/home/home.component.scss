@@ -14,3 +14,22 @@ a:hover {
     padding: 10px;
     font-size: larger;
 }
+
+.research-papers {
+    div {
+        padding: 20dp;
+    }
+    margin-top: 50dp;
+}
+
+.company-logo {
+    img {
+        width: 100%;
+        max-width: 450px;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    height: 150px;
+    margin-top: 50px;
+}

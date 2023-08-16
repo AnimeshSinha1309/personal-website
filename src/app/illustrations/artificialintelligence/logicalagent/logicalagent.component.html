@@ -1,6 +1,12 @@
 <div class="container">
 <div class="row" id="content">
-  <h1 class="display-4">Logical Agents</h1>
+  <h1 class="display-4">Model Filtering</h1>
+  <p>
+    Classical Artificial Intelligence, from long before the era of Deep Neural Networks, was all about search. Ever since we realized that computers could crunch through massive amounts of data, we thought that we will put together rules that the computer would search through and achieve true intelligence. This would span everything from using simple integration formulae and substitution rules together with some heuristics to make the computers do Calculus. The same with playing games like Pacman, heuristics and some general rules couple with search should help us behave near optimally, as it does. Even today, when we have robots moving around the real world, after the perception is done by a neural network, the planning of where to go and what to do is done through search.
+  </p>
+  <p>
+    Model filtering is a form of search, where we maintain a set of possible states we are in, and as we explore the world we keep updating this set of belief states. This is the simplest (computationally inefficient, yet complete) solution we have to solving <a href="https://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process">Partially Observable Markov Decision Processes (POMDP)</a>. These are processes where we are supposed to try to behave optimally in the world, but some part of the state of the world is hidden from us. In the following blog and illustrations, we see an example of how the a simple game can be navigated with Model Filtering. This illustrations is derived from the <a href="https://aima.cs.berkeley.edu/">Artificial Intelligence: A modern approach by Stuart Russel and Peter Norwig</a>.
+  </p>
   <!--Gameplay Board-->
   <div class="col-lg-12">
     <h1>Wumpus World</h1>

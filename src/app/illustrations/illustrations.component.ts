@@ -7,13 +7,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class IllustrationsComponent implements OnInit {
 
-  modulesList = {
-    "Artificial Intelligence": ["Logical Agent"],
-    "Molecular Chemistry": ["Molecule Render"],
-  }
+  modulesList = [
+    "Artificial Intelligence / Model Filtering",
+    "Molecular Chemistry / Molecule Render",
+  ]
 
-  @Input() selectedClass: string = "Select Section";
-  @Input() selectedDemo: string = "Molecule Render";
+  @Input() selectedDemo: string = this.modulesList[0];
 
   constructor() {}
 

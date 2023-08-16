@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
 import { MoleculeRenderComponent } from './illustrations/molecularchemistry/moleculerender/moleculerender.component';
@@ -50,6 +51,7 @@ import { FormsModule } from '@angular/forms'
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
+    MatExpansionModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
