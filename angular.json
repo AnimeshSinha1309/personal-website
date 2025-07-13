@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "7fbedd9f-5156-4bb2-b196-871aed24120c"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -18,7 +21,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/",
-            "baseHref": "/~animesh.sinha/",
+            "baseHref": "/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
