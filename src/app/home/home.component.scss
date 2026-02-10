@@ -1,18 +1,5 @@
-div.container {
-    padding: 50px;
-}
-
 a:hover {
     text-decoration: none;
-}
-
-.project-item {
-    div.border-box {
-        border: thick gray solid;
-        padding: 10px;
-    }
-    padding: 10px;
-    font-size: larger;
 }
 
 .research-papers {
@@ -22,14 +9,238 @@ a:hover {
     margin-top: 50dp;
 }
 
+.publication-card {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.abstract-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+    &.expanded {
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
+    }
+}
+
+.abstract-text {
+    padding: 16px;
+    margin: 0;
+}
+
+.expand-button {
+    /* Position is no longer absolute as it will be in the actions bar */
+    margin-left: auto; /* potential alignment helper if needed, but flexbox usually handles it */
+}
+
 .company-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 15px;
+
     img {
-        width: 100%;
-        max-width: 450px;
-        max-height: 150px;
+        max-width: 100%;
+        max-height: 80px;
         object-fit: contain;
     }
+}
 
-    height: 150px;
-    margin-top: 50px;
+.job-card {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.carousel-section {
+    position: relative;
+    padding: 0 40px; /* Space for arrows */
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 0;
+    
+    /* Hide scrollbar */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-item-custom {
+    box-sizing: border-box;
+    flex: 0 0 calc(30% - 20px); /* 3.3 items visible */
+    scroll-snap-align: start;
+    min-width: 300px; /* Fallback for smaller screens */
+    padding: 10px; /* Buffer for shadow */
+    
+    mat-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .company-logo {
+        height: 80px; /* Reduced from 100px */
+        
+        img {
+            max-height: 50px; /* Reduced from 80px */
+        }
+    }
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+
+    &:hover {
+        background: rgba(0,0,0,0.3);
+    }
+
+    &.prev {
+        left: 0;
+    }
+
+    &.next {
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item-custom {
+        flex: 0 0 85%; /* 1 item visible on mobile with peek */
+    }
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Constrain width */
+    height: 250px; /* Reduce height */
+    margin: 0 auto; /* Center in column */
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f0f0f0; /* Placeholder color */
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .current-image {
+        z-index: 1;
+    }
+
+    .next-image {
+        z-index: 2;
+    }
+}
+
+/* Animations */
+.slide-in-left {
+    animation: slideInLeft 1s forwards ease-in-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s forwards ease-in-out;
+}
+
+.slide-in-top {
+    animation: slideInTop 1s forwards ease-in-out;
+}
+
+.slide-in-bottom {
+    animation: slideInBottom 1s forwards ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideInBottom {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+    
+    .container {
+        margin-bottom: 0 !important; /* Let section padding handle spacing */
+    }
+}
+
+.section-hero {
+    background-color: #ffffff;
+}
+
+.section-research {
+    background-color: #f8f9fa; /* Light Gray */
+}
+
+.section-work {
+    background-color: #ffffff;
+}
+
+.section-projects {
+    background-color: #f3f4f6; /* Slightly different Gray/Blue tint */
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 16px;
+    margin-top: auto; /* Push to bottom if using flex column in card */
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    
+    &.yellow { background-color: #fff9c4; color: #fbc02d; }
+    &.pink { background-color: #f8bbd0; color: #c2185b; }
+    &.blue { background-color: #bbdefb; color: #1976d2; }
+    &.green { background-color: #c8e6c9; color: #388e3c; }
+    &.purple { background-color: #e1bee7; color: #7b1fa2; }
 }
