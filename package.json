@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && ng serve",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && ng build",
+    "start": "node scripts/generate-blog-index.js && export NODE_OPTIONS=--openssl-legacy-provider && ng serve",
+    "build": "node scripts/generate-blog-index.js && export NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,8 +22,10 @@
     "@angular/platform-browser": "^12.2.8",
     "@angular/platform-browser-dynamic": "^12.2.8",
     "@angular/router": "^12.2.8",
+    "@types/marked": "^5.0.2",
     "firebase": "^9.1.1",
     "jquery": "^3.6.0",
+    "marked": "^17.0.1",
     "svg.js": "^2.7.1",
     "three": "^0.133.1"
   },

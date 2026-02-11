@@ -1,0 +1,12 @@
+[
+  {
+    "file": "hello-world.md",
+    "title": "Hello World",
+    "date": "2024-02-14",
+    "tags": [
+      "#general",
+      "#welcome"
+    ],
+    "preview": "# Hello Blog!\n\nThis is my first dynamic blog post. It's written in Markdown and rendered in Angular.\n\n## Why this is cool\n- It's simple\n- It's dyna..."
+  }
+]
