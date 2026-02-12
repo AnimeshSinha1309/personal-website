@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "ng": "export NODE_OPTIONS=--openssl-legacy-provider && ng",
     "start": "node scripts/generate-blog-index.js && export NODE_OPTIONS=--openssl-legacy-provider && ng serve",
     "build": "node scripts/generate-blog-index.js && export NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "test": "ng test",
@@ -22,9 +22,11 @@
     "@angular/platform-browser": "^12.2.8",
     "@angular/platform-browser-dynamic": "^12.2.8",
     "@angular/router": "^12.2.8",
+    "@types/leaflet": "^1.7.5",
     "@types/marked": "^5.0.2",
     "firebase": "^9.1.1",
     "jquery": "^3.6.0",
+    "leaflet": "^1.9.4",
     "marked": "^17.0.1",
     "svg.js": "^2.7.1",
     "three": "^0.133.1"
