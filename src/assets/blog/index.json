@@ -1,12 +1,21 @@
 [
   {
-    "file": "hello-world.md",
-    "title": "Hello World",
-    "date": "2024-02-14",
+    "file": "20260213-fallacious-fallacies.md",
+    "title": "Fallacious Fallacies!",
+    "date": "2026-02-13",
     "tags": [
-      "#general",
-      "#welcome"
-    ],
-    "preview": "# Hello Blog!\n\nThis is my first dynamic blog post. It's written in Markdown and rendered in Angular.\n\n## Why this is cool\n- It's simple\n- It's dyna..."
+      "#philosophy",
+      "#peptalk"
+    ]
+  },
+  {
+    "file": "20260212-against-growth-mindset.md",
+    "title": "Against Growth Mindset",
+    "date": "2026-02-12",
+    "tags": [
+      "#philosophy",
+      "#peptalk"
+    ]
   }
+
 ]
