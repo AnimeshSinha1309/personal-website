@@ -9,10 +9,11 @@ export class IllustrationsComponent implements OnInit {
 
   modulesList = [
     "Artificial Intelligence / Model Filtering",
+    "Artificial Intelligence / Variational AutoEncoders",
     "Molecular Chemistry / Molecule Render",
   ]
 
-  @Input() selectedDemo: string = this.modulesList[0];
+  @Input() selectedDemo: string | null = null;
 
   constructor() {}
 

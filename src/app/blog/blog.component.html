@@ -1,1 +1,45 @@
-<iframe [src]="safeUrl" style="width: 100%; height: 100vh; border: none;"></iframe>
+<div class="container blog-container mb-5 pt-5">
+  <div class="row">
+    <!-- Article List (Sidebar mode or Full mode) -->
+    <div class="col-md-4 col-lg-3">
+      <div class="list-group">
+        <button *ngFor="let post of posts" 
+                type="button" 
+                class="list-group-item list-group-item-action mb-2 border-0 shadow-sm rounded"
+                [class.active]="selectedPost === post"
+                (click)="selectPost(post)">
+          <div class="d-flex w-100 justify-content-between align-items-center">
+            <h5 class="mb-1 fw-bold">{{ post.title }}</h5>
+          </div>
+          <small class="text-muted d-block mb-2">{{ post.date | date }}</small>
+          <div class="tags">
+            <span *ngFor="let tag of post.tags" class="badge rounded-pill bg-light text-dark me-1 border">
+              {{ tag }}
+            </span>
+          </div>
+          <p class="mb-1 mt-2 small text-secondary" *ngIf="!selectedPost">
+            {{ post.preview }}
+          </p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="col-md-8 col-lg-9" *ngIf="selectedPost">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+            <button class="btn btn-sm btn-outline-secondary mb-3 d-md-none" (click)="selectedPost = null">
+                &larr; Back to list
+            </button>
+            <h1 class="display-4 fw-bold mb-2">{{ selectedPost.title }}</h1>
+            <p class="text-muted mb-4">
+                {{ selectedPost.date | date:'longDate' }}
+                <span class="mx-2">•</span>
+                <span *ngFor="let tag of selectedPost.tags" class="badge bg-secondary me-1">{{ tag }}</span>
+            </p>
+            <div class="blog-content" [innerHTML]="postContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

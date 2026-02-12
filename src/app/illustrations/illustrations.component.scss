@@ -1,3 +1,42 @@
 div#illustrations-topic {
     margin-bottom: 50px;
 }
+
+h1 {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+h4 {
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.demo-list-item {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    color: #333;
+    font-weight: 400;
+
+    &:hover {
+        background-color: #f8f9fa;
+        transform: translateX(5px);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    mat-icon {
+        color: #6c757d;
+        transition: color 0.2s ease;
+    }
+
+    &:hover mat-icon {
+        color: #007bff;
+    }
+}
+
+.back-btn {
+    margin-right: 15px;
+}

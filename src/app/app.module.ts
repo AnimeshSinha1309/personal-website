@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -26,8 +27,10 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LogicalagentComponent } from './illustrations/artificialintelligence/logicalagent/logicalagent.component';
 import { MoleculeRenderComponent } from './illustrations/molecularchemistry/moleculerender/moleculerender.component';
+import { NotesComponent } from './notes/notes.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './users/profile/profile.component';
+import { VaeComponent } from './illustrations/artificialintelligence/vae/vae.component';
 
 
 @NgModule({
@@ -41,7 +44,9 @@ import { ProfileComponent } from './users/profile/profile.component';
     // The submodules being rendered
     LogicalagentComponent,
     MoleculeRenderComponent,
-    BlogComponent
+    NotesComponent,
+    BlogComponent,
+    VaeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ import { ProfileComponent } from './users/profile/profile.component';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

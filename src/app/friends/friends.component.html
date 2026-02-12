@@ -1,20 +1,57 @@
-<div class="container">
-  <div class="row page-heading">
-    <h1 class="display-2">Come meet my friends!</h1>
-  </div>
-  <div class="row">
-    <div *ngFor="let friend of friends" class="col-lg-4 card-container">
-      <mat-card>
-        <mat-card-header>
-          <img mat-card-avatar src="assets/friends/{{ friend.id }}.jpeg" alt="A">
-          <mat-card-title>{{ friend.name }}</mat-card-title>
-          <mat-card-subtitle>{{ friend.affiliation }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image class="friend-image" src="assets/friends/{{ friend.id }}.jpeg" alt="Friend Avatar">
-        <mat-card-actions>
-          <a mat-button href="{{ friend.linkedin }}">LinkedIn</a>
-        </mat-card-actions>
-      </mat-card>
+<section class="section-hobbies bg-white">
+  <div class="container text-center pt-5 pb-5">
+    <h1 class="display-3 mb-5">Fun things I like doing</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-3 mb-4">
+        <a href="https://lichess.org/@/Anister" target="_blank" class="hobby-link text-decoration-none">
+          <i class="fas fa-chess-knight fa-5x mb-3" style="color: #769656;"></i>
+          <h4 class="mt-2 text-dark">@Anister</h4>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://www.youtube.com/@AnimeshSinha1309" target="_blank" class="hobby-link text-decoration-none">
+          <i class="fab fa-youtube fa-5x mb-3 text-danger"></i>
+          <h4 class="mt-2 text-dark">@AnimeshSinha1309</h4>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section-friends">
+  <div class="container text-center mb-5">
+    <h1 class="display-3 mb-5">Meet my friends!</h1>
+    
+    <div class="carousel-section">
+      <button class="nav-btn prev" (click)="scrollLeft()" aria-label="Previous">
+          <mat-icon>chevron_left</mat-icon>
+      </button>
+
+      <div class="carousel-container" #friendsCarousel>
+        <div *ngFor="let friend of friends" class="carousel-item-custom">
+          <mat-card class="h-100 shadow-sm">
+            <mat-card-header>
+              <mat-card-title>{{ friend.name }}</mat-card-title>
+              <mat-card-subtitle>{{ friend.affiliation }}</mat-card-subtitle>
+            </mat-card-header>
+            <img class="friend-image" src="assets/friends/{{ friend.id }}.jpeg" alt="{{ friend.name }}">
+            <mat-card-actions>
+              <a mat-button href="{{ friend.linkedin }}" target="_blank">LinkedIn</a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+      <button class="nav-btn next" (click)="scrollRight()" aria-label="Next">
+          <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section-places bg-white">
+  <div class="container text-center">
+    <h1 class="display-3 mb-5">Places I've been to</h1>
+    <div id="placesMap" style="height: 500px; width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+  </div>
+</section>
