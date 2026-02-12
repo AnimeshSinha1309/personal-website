@@ -1,22 +1,60 @@
-<div id="illustrations-topic">
+<!-- Landing Page: Shown when no demo is selected -->
+<div class="container mt-5" *ngIf="!selectedDemo">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <h1 class="display-4">Academic Content</h1>
+      <h4 class="text-muted">Animations, Lectures, and more</h4>
+      
+      <div class="d-flex flex-column align-items-stretch">
+        <div *ngFor="let demo of modulesList" 
+             (click)="selectedDemo = demo"
+             class="demo-list-item d-flex justify-content-between align-items-center mb-3 bg-white shadow-sm border-0">
+          <span>{{ demo }}</span>
+          <mat-icon>chevron_right</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Demo View: Shown when a demo is selected -->
+<div id="illustrations-topic" *ngIf="selectedDemo">
   <mat-toolbar color="secondary">
     <mat-toolbar-row>
-      <button mat-button [matMenuTriggerFor]="menuTopic">{{selectedDemo}}</button>
+      <button mat-icon-button (click)="selectedDemo = null" class="back-btn" aria-label="Back to list">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      
+      <!-- Dropdown for quick switching -->
+      <button mat-button [matMenuTriggerFor]="menuTopic" class="text-truncate" style="max-width: 80%;">
+        {{selectedDemo}} <mat-icon class="ms-1" style="font-size: 1.2em; vertical-align: middle;">arrow_drop_down</mat-icon>
+      </button>
+      
       <mat-menu #menuTopic="matMenu">
+        <button mat-menu-item (click)="selectedDemo = null">
+          <mat-icon>list</mat-icon> Back to List
+        </button>
+        <mat-divider></mat-divider>
         <button mat-menu-item
                 *ngFor="let demo of modulesList"
                 (click)="selectedDemo = demo">
           {{demo}}
         </button>
       </mat-menu>
-      <span>&#10003;</span>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
 
-<app-illustrations-artificialintelligence-logicalagent
-  *ngIf="selectedDemo == 'Artificial Intelligence / Model Filtering'">
-</app-illustrations-artificialintelligence-logicalagent>
-<app-illustrations-molecularchemistry-moleculerender
-  *ngIf="selectedDemo == 'Molecular Chemistry / Molecule Render'">
-</app-illustrations-molecularchemistry-moleculerender>
+<ng-container *ngIf="selectedDemo">
+  <app-illustrations-artificialintelligence-logicalagent
+    *ngIf="selectedDemo == 'Artificial Intelligence / Model Filtering'">
+  </app-illustrations-artificialintelligence-logicalagent>
+  
+  <app-illustrations-molecularchemistry-moleculerender
+    *ngIf="selectedDemo == 'Molecular Chemistry / Molecule Render'">
+  </app-illustrations-molecularchemistry-moleculerender>
+  
+  <app-illustrations-artificialintelligence-vae
+    *ngIf="selectedDemo == 'Artificial Intelligence / Variational AutoEncoders'">
+  </app-illustrations-artificialintelligence-vae>
+</ng-container>

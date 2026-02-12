@@ -30,6 +30,7 @@ import { MoleculeRenderComponent } from './illustrations/molecularchemistry/mole
 import { NotesComponent } from './notes/notes.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './users/profile/profile.component';
+import { VaeComponent } from './illustrations/artificialintelligence/vae/vae.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ProfileComponent } from './users/profile/profile.component';
     LogicalagentComponent,
     MoleculeRenderComponent,
     NotesComponent,
-    BlogComponent
+    BlogComponent,
+    VaeComponent
   ],
   imports: [
     BrowserModule,
