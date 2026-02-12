@@ -5,8 +5,6 @@ date: 2026-02-13
 tags: #philosophy #peptalk
 -->
 
-# Fallacious Fallacies!
-
 I long thought that those who give into the fallacies below are making mistakes. They are unable to understand the realities of the world. Maybe I was wrong.
 
 ## Sunken Cost

@@ -1,12 +1,13 @@
 [
   {
     "file": "20260213-fallacious-fallacies.md",
-    "title": "Fallacious Fallacies!",
+    "title": "Fallacious Fallacies",
     "date": "2026-02-13",
     "tags": [
       "#philosophy",
       "#peptalk"
-    ]
+    ],
+    "preview": "I long thought that those who give into the fallacies below are making mistakes. They are unable to understand the realities of the world. Maybe I..."
   },
   {
     "file": "20260212-against-growth-mindset.md",
@@ -15,7 +16,7 @@
     "tags": [
       "#philosophy",
       "#peptalk"
-    ]
+    ],
+    "preview": "I know what the growth mindset is, I have it.\nI can come each day, find all that's wrong, most pressingly wrong, and improve at it.\nI do that, but..."
   }
-
 ]

@@ -5,8 +5,6 @@ date: 2026-02-12
 tags: #philosophy #peptalk
 -->
 
-# Against Growth Mindset!
-
 I know what the growth mindset is, I have it.
 I can come each day, find all that's wrong, most pressingly wrong, and improve at it.
 I do that, but each day I find that I want more, in each dimension, and I keep falling short.
